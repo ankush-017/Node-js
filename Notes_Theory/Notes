@@ -1,0 +1,50 @@
+/*  Why we use Node js ? */
+- superfast and highly scalable
+- javaScript everywhere
+- consistent and clean codebase
+- huge community support
+- Large ecosystem of open source Libs (NPM)
+
+/*Features of Node js*/
+- single Threaded
+- asynchronous
+- event driven
+- NPM
+- highly scalable
+- Performance
+
+/* What is module */
+- when we write code in any editior in two separate file, those files are not 
+related t each other, if the variable name is same , then again their is no any relation
+on separate file. Both are different until use any Modularity from that file.
+
+/*What is modularity ?*/
+- in A file I make a function and we want to export this to the another file these are happen through 
+modularity concept
+
+/* require()*/
+In Node.js, the require() function is used to import modules, libraries, or files into your current 
+JavaScript file. It's part of the CommonJS module system, which is the default module system used in Node.js.
+
+
+-------------------------------------------------------------------------------------------------------------------
+// Module of Node.js //--------------------------------------------------------------------------------------------
+
+/*  child Process */
+In Node.js, the child_process module allows you to create and manage subprocesses that run independently of the main Node.js application. These subprocesses can execute system commands, run other scripts, or spawn new Node.js processes, which is especially useful in scenarios that require multitasking or offloading work from the main
+thread.
+
+Child processes allow you to offload these intensive tasks to a separate process, ensuring that the main event loop remains responsive.
+
+1. execSync : (Execute Synchronously) It is a method provided by the child_process module that allows you to execute a shell command synchronously. This means that it runs the command and waits for it to finish before proceeding to the next line of code, effectively blocking the execution of your program until the command completes.
+
+-----------------------------------------------------------------------------
+
+/* os */
+
+(Operating System module) module provides operating system-related utility methods and properties that allow developers to interact with and retrieve information about the underlying operating system. This includes details like the platform, CPU architecture, memory usage, and more.
+
+/* path */
+
+path module provides utilities for working with file and directory paths. It allows you to manipulate file paths in a way that works across different operating systems, ensuring portability between Unix-like systems (e.g., Linux, macOS) and Windows.
+
