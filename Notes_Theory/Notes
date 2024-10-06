@@ -48,6 +48,7 @@ Child processes allow you to offload these intensive tasks to a separate process
 
 path module provides utilities for working with file and directory paths. It allows you to manipulate file paths in a way that works across different operating systems, ensuring portability between Unix-like systems (e.g., Linux, macOS) and Windows.
 
+<<<<<<< HEAD
 
 /* _____________________________________----------------------------------___________________________________ */
 
@@ -140,3 +141,5 @@ It is commonly used in APIs when the client sends JSON data.
             -------------------------------------------------------------------------
                                         Why we use  app.use() ?
 In Express.js, the app.use() method is used to define middleware functions. Middleware in Express.js is a set of functions that are executed in the request-response cycle. These functions have access to the request object (req), the response object (res), and the next function, which passes control to the next middleware in the stack.
+=======
+>>>>>>> 254cc2b70e18ded338083741ce9ab4e7c5a642b7
