@@ -48,3 +48,95 @@ Child processes allow you to offload these intensive tasks to a separate process
 
 path module provides utilities for working with file and directory paths. It allows you to manipulate file paths in a way that works across different operating systems, ensuring portability between Unix-like systems (e.g., Linux, macOS) and Windows.
 
+
+/* _____________________________________----------------------------------___________________________________ */
+
+//                            [Publish Own NPM]
+
+1. npm init
+2. npm adduser   (username,password,email,otp)
+3. npm login
+4. make an "index.js" (that will hold all the configuration that you want to implement)
+5. npm publish
+
+
+/*--------------------------------------+++++-------------------------------------------------------------------*/
+
+/* Express js */
+Express.js is a minimal and flexible Node.js web application framework that provides a robust set of features for building web and mobile applications. It simplifies the development of server-side applications by handling common tasks like -- routing, middleware, and handling HTTP requests --.
+
+- Framework for Node.js: It’s a framework built on top of Node.js that makes it easier to build server-side applications.
+
+- Minimal and flexible: Express provides just the fundamental features you need, without unnecessary complexity, and you can extend it with middleware and plugins.
+
+- Middleware support: You can add functionality like authentication, validation, or logging using middleware functions.
+
+- Routing: Express makes it easy to define routes to handle different HTTP methods (GET, POST, PUT, DELETE) for different URLs.
+
+/* -------------------------------------------------------------- =========== -----------------------------------*/
+
+GET, POST, PUT, DELETE, and few others These methods represent actions that can be performed on a web server.
+
+1. GET Methods:  The GET method is used to retrieve data from the server. It's a read-only operation, meaning it doesn't modify any data on the server.
+
+Common Use Case: Fetching data from a database, displaying HTML pages, or returning a resource like a file.
+
+2. POST Methods: The POST method is used to send data to the server for processing or storage. It typically modifies the server state (e.g., inserting new data into a database).
+
+Common Use Case: Creating new records in a database, handling form submissions.
+----------------------------------------------------------------------------------------------------------------
+=>  app.use(express.json());  Middleware to parse incoming JSON payloads(use this) {Inbuilt middleware}
+
+The req.body contains the parsed data sent by the client (e.g., from a form submission or API request). You must use middleware (express.json()) to parse incoming JSON data in the request body.
+----------------------------------------------------------------------------------------------------------------
+3. app.listen(): The app.listen() method is used to start the server and listen for incoming connections on a specified port.
+
+4. res.send(): This method sends a response back to the client. It can send strings, buffers, or JSON objects.
+
+5. PUT: It is for updating existing resources.
+
+
+/* - - - - - - --   -- - - - - - -- - - - - - - - - - - - - --  -- - - - - - - - - - - - - - --- - - - -  -- --*/
+/* ----------------------------------------------------------------------------------------------------------- */
+
+                                           /*middlewares in express*/
+
+In Express.js, middlewares are functions that have access to the request (req), response (res), and the next middleware function in the application’s request-response cycle. Middleware functions can execute code, modify the request and response objects, end the request-response cycle, or call the next middleware in the stack.
+
+Types of Middlewares in Express::
+1. Custom Middewares: 
+    Custom middlewares in Express.js are user-defined middleware functions that allow you to insert custom logic into the request-response cycle. You can create custom middlewares for various tasks, like authentication, logging, validation, or any other processing you need before or after the route handlers.
+
+ex: function customMiddleware(req, res, next) {
+    // Custom logic here
+    next(); // Call next to pass control to the next middleware or route handler
+}
+
+2. Built-in middleware: 
+    functions that simplify tasks like serving static files, parsing request bodies, and handling JSON data. These middleware functions help handle common functionalities without the need to write custom middleware.
+
+ex:-----
+a. express.static():
+
+It serves static files such as HTML, CSS, JavaScript, or images.
+You specify a directory, and Express will serve files from that directory.
+
+b. express.json():
+
+This middleware parses incoming JSON request bodies and makes the data available on req.body.
+It is commonly used in APIs when the client sends JSON data.
+
+3. Third-party middlewares:
+     in Express are external libraries or packages that you can integrate into your Express application to handle various tasks, such as logging, security, data parsing, and more. These middlewares are not part of the core Express framework, but they are widely used to extend the functionality of Express applications.
+
+     ex: morgan, cors, body-parser, cookie-parser, helmet
+
+===================================================================================================================
+                                            Why we use next ?
+
+    In Express, the next() function is used in middleware to pass control to the next middleware or route handler in the application's request-response cycle.
+
+
+            -------------------------------------------------------------------------
+                                        Why we use  app.use() ?
+In Express.js, the app.use() method is used to define middleware functions. Middleware in Express.js is a set of functions that are executed in the request-response cycle. These functions have access to the request object (req), the response object (res), and the next function, which passes control to the next middleware in the stack.
